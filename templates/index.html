@@ -2,16 +2,30 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İlk Python Web Sitem</title>
+    <title>Halil'e Sor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
 <body>
     <div class="container">
-        <h1>🚀 Web Sitesi Çalışıyor</h1>
-        <p>Python + Flask + VS Code</p>
-        <button>Devam Et</button>
+
+        <img src="/static/halil.jpg" class="avatar">
+
+        <h1>💬 Halil'e Sor</h1>
+
+        <form method="POST">
+            <input type="text" name="soru" placeholder="Sorunu yaz..." required>
+            <button type="submit">Sor</button>
+        </form>
+
+        {% if cevap %}
+            <div class="cevap">
+                <strong>Cevap:</strong> {{ cevap }}
+            </div>
+        {% endif %}
+
     </div>
 </body>
-
 </html>
+
