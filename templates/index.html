@@ -14,10 +14,10 @@
 
         <h1>💬 Halil'e Sor</h1>
 
-        <form method="POST">
-            <input type="text" name="soru" placeholder="Sorunu yaz..." required>
-            <button type="submit">Sor</button>
-        </form>
+        <form action="/sor" method="POST">
+    <input type="text" name="soru" placeholder="Sorunu yaz..." required>
+    <button type="submit">Sor</button>
+</form>
 
         {% if cevap %}
             <div class="cevap">
